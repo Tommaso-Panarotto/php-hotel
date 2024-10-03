@@ -56,38 +56,44 @@ $hotels = [
 
 <body>
     <div class="container">
-        <table class="table">
+        <table class="table table-bordered text-center">
             <thead>
                 <tr>
                     <th scope="col">Name</th>
                     <?php foreach ($hotels as $name) { ?>
-                        <th scope="col"><?php echo $name["name"] ?></th>
+                        <th scope="col"><?php echo $name["name"]; ?></th>
                     <? } ?>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td scope="row">Description</td>
+                    <td scope="row"><b>Description</b></td>
                     <?php foreach ($hotels as $description) { ?>
-                        <td><?php echo $description["description"] ?></td>
+                        <td><?php echo $description["description"]; ?></td>
                     <? } ?>
                 </tr>
                 <tr>
-                    <td scope="row">Parking</td>
+                    <td scope="row"><b>Parking</b></td>
                     <?php foreach ($hotels as $parking) { ?>
-                        <td><?php echo $parking["parking"] ?></td>
+                        <td><?php
+                            if ($parking["parking"]) {
+                                echo "presente";
+                            } else {
+                                echo "non presente";
+                            }
+                            ?></td>
                     <? } ?>
                 </tr>
                 <tr>
-                    <td scope="row">Vote</td>
+                    <td scope="row"><b>Vote</b></td>
                     <?php foreach ($hotels as $vote) { ?>
-                        <td><?php echo $vote["vote"] ?></td>
+                        <td><?php echo $vote["vote"]; ?></td>
                     <? } ?>
                 </tr>
                 <tr>
-                    <td scope="row">Distance to center</td>
+                    <td scope="row"><b>Distance to center</b></td>
                     <?php foreach ($hotels as $distance) { ?>
-                        <td><?php echo $distance["distance_to_center"] ?></td>
+                        <td><?php echo $distance["distance_to_center"], 'km'; ?></td>
                     <? } ?>
                 </tr>
             </tbody>
