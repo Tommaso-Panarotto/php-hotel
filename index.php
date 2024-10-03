@@ -56,8 +56,9 @@ $hotels = [
 
 <body>
     <div class="container">
-        <table class="table table-bordered text-center">
+        <table class="table table-bordered text-center mt-5">
             <thead>
+                <!--table head -->
                 <tr>
                     <th scope="col">Name</th>
                     <?php foreach ($hotels as $name) { ?>
@@ -66,12 +67,14 @@ $hotels = [
                 </tr>
             </thead>
             <tbody>
+                <!-- description hotel-->
                 <tr>
                     <td scope="row"><b>Description</b></td>
                     <?php foreach ($hotels as $description) { ?>
                         <td><?php echo $description["description"]; ?></td>
                     <? } ?>
                 </tr>
+                <!-- parking -->
                 <tr>
                     <td scope="row"><b>Parking</b></td>
                     <?php foreach ($hotels as $parking) { ?>
@@ -84,12 +87,14 @@ $hotels = [
                             ?></td>
                     <? } ?>
                 </tr>
+                <!-- vote -->
                 <tr>
                     <td scope="row"><b>Vote</b></td>
                     <?php foreach ($hotels as $vote) { ?>
                         <td><?php echo $vote["vote"]; ?></td>
                     <? } ?>
                 </tr>
+                <!--distance to center-->
                 <tr>
                     <td scope="row"><b>Distance to center</b></td>
                     <?php foreach ($hotels as $distance) { ?>
